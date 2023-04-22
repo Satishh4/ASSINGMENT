@@ -1,31 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+
 .App {
   text-align: center;
+  font-family: system-ui;
+  background: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 50px;
+  background-color: #111010;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-bottom: 2px solid #333;
+}
+
+.navbar-logo h1 {
+  height: 30px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-links {
+  display: flex;
+  list-style: none;
 }
 
-.heart {
-  color: #ff0000;
+.navbar-links li:not(:last-child) {
+  margin-right: 30px;
 }
 
-.small {
-  font-size: 0.75rem;
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #c0392b;
+}
+
+
+/* button begin */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button span {
+  cursor: pointer;
+}
+
+button:active span {
+  transform: translateY(2px);
+}
+
+
+/* button end */
+
+/* container begin */
+.container{
+  height: 80vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #141417 50%, #020012 50%);
+}
+.container-left{ 
+  display: flex; 
+  flex-direction: column;
+  color: white; 
+  justify-content: center;
+  padding: 120px 140px 120px 0px;
+}
+
+
+.container-right{  
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.videoo{
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+/* textbox */
+.text-container{
+  display: flex;
+} 
+
+.textbox {
+  width: 514px;
+  padding: 10px;
+  color: #ffc600;
+  background: #0f0f0f;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  font-size: 26px;
+  font-family: 'Montserrat', sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.textbox:focus {
+  outline: none;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.head-txt{
+  font-size: 25px;
+  font-family: system-ui;
+  margin: 18px 0px 18px 0px;
+}
+
+.btn-row{
+  gap: 12px; 
+  display: flex;
+}
+
+.btn-row button{
+  padding: 8px;
+  background: #bfbfbf;
+  color: black;
+  border: none;
+  display: flex;
+  font-size: small;
+  font-weight: inherit;
+  box-shadow: 0px 0px 1px red;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-row button:hover{
+  box-shadow: none;
+}
+
+.attch-png{
+  height: 20px;
+  width: 20px;
+  padding: 0px 0px 0px 8px;
+}
+
+/* links */
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.link-btn{
+  display: flex;
+  padding: 15px 0px 10px 0px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.big-btn{
+  margin-top: 10px;
+  display: flex;
+  border-radius: 4px;
+  width: 60%;
+  background: linear-gradient(45deg, #76009e, #ff0c0c);
+  color: white;
+  border: none;
+  padding: 12px 0px 12px 0px;
+  font-size: larger;
+  box-shadow: 0px 0px 2px red;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-btn:hover{
+  box-shadow: 0px 0px 2px yellow;
+}
+
+/* progress bar begin */
+.progress-bar {
+  width: 100%;
+  height: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar__fill {
+  position: absolute;
+  height: 100%;
+  background-color: #ff0000;
+  transition: width 0.5s ease;
+}
+
+.progress-bar__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 3px #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* Gaming-inspired design */
+.progress-bar {
+  background-color: #1a1a1a;
+  margin: 20px 0px 9px 0px;
+  height: 6px;
+}
+
+.progress-bar__fill {
+  background-color: #00ff00;
+}
+
+.timer{
+  display: flex;
+  margin: 0;
+}
+
+ 
+
+/* progress bar end */
+
+/* phone view  */
+@media only screen and (max-width: 767px) {
+  .container-right{
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.vdo{
+  width: 40vw;
+}
+@media only screen and (max-width: 767px) {
+  .vdo{
+    width: 100vw;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .container-left {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .textbox{
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+.btn-row button {
+  padding: 5px;
+}
+}
+
+/* container-2 begin */
+.container-2{
+  height: 70vh;
+  background-color: black;
+  border-top: 1px solid #333333;
 }
